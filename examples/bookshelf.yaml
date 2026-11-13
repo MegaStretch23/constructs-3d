@@ -1,0 +1,43 @@
+# A small bookshelf: two sides, a back, three shelves, and a ball on top.
+name: Bookshelf
+units: cm
+parts:
+  - id: left
+    shape: box
+    size: [2, 120, 30]
+    position: [-39, 60, 0]
+    color: "#8b5a2b"
+  - id: right
+    shape: box
+    size: [2, 120, 30]
+    position: [39, 60, 0]
+    color: "#8b5a2b"
+  - id: back
+    shape: box
+    size: [76, 120, 1]
+    position: [0, 60, -14.5]
+    color: "#a9743c"
+  - id: shelf-low
+    shape: box
+    size: [76, 2, 30]
+    position: [0, 5, 0]
+    color: "#b9834a"
+  - id: shelf-mid
+    shape: box
+    size: [76, 2, 30]
+    parent: shelf-low
+    position: [0, 45, 0]
+    color: "#b9834a"
+  - id: shelf-top
+    shape: box
+    size: [76, 2, 30]
+    parent: shelf-low
+    position: [0, 90, 0]
+    color: "#b9834a"
+  - id: globe
+    shape: sphere
+    radius: 8
+    parent: shelf-top
+    position: [-20, 9, 0]
+    color: "#3f7fbf"
+    label: Globe

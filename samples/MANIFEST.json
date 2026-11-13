@@ -1,0 +1,53 @@
+{
+  "generated_by": "samples/make_manifest.py",
+  "python": "3.12.3",
+  "note": "Outputs of the CLI on the files in examples/; the HTML is not stored (about 700 KB each), only its size and SHA-256.",
+  "runs": [
+    {
+      "command": "constructs-3d validate examples/desk-lamp.json",
+      "exit_code": 0,
+      "stdout": "ok: examples/desk-lamp.json",
+      "stderr": ""
+    },
+    {
+      "command": "constructs-3d info examples/desk-lamp.json",
+      "exit_code": 0,
+      "stdout": "Desk lamp: 5 parts 1 box, 1 cone, 2 cylinder, 1 sphere\nbounds min [-8, 0.0, -8] max [25, 32.6, 8] size [33, 32.6, 16]",
+      "stderr": ""
+    },
+    {
+      "command": "constructs-3d build examples/desk-lamp.json -o <tmp>/desk-lamp.html",
+      "exit_code": 0,
+      "stdout": "wrote <tmp>/desk-lamp.html (697724 bytes, 5 parts)",
+      "stderr": "",
+      "html_bytes": 697724,
+      "html_sha256": "3d867a9ef618d34de8c4e52afbadc10bdc0dc1b92cbf0a9b276414ae87ac46cb"
+    },
+    {
+      "command": "constructs-3d validate examples/bookshelf.yaml",
+      "exit_code": 0,
+      "stdout": "ok: examples/bookshelf.yaml",
+      "stderr": ""
+    },
+    {
+      "command": "constructs-3d info examples/bookshelf.yaml",
+      "exit_code": 0,
+      "stdout": "Bookshelf: 7 parts 6 box, 1 sphere\nbounds min [-40.0, 0.0, -15.0] max [40.0, 120.0, 15.0] size [80.0, 120.0, 30.0]",
+      "stderr": ""
+    },
+    {
+      "command": "constructs-3d build examples/bookshelf.yaml -o <tmp>/bookshelf.html",
+      "exit_code": 0,
+      "stdout": "wrote <tmp>/bookshelf.html (697996 bytes, 7 parts)",
+      "stderr": "",
+      "html_bytes": 697996,
+      "html_sha256": "9cf476ed88e05c08812be9c1db29c24c65b3619e2ec800c33ba370efe5fbc565"
+    },
+    {
+      "command": "constructs-3d validate examples/invalid.json",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "invalid: parts[0]: box 'size' must be [width, height, depth], all numbers > 0\ninvalid: parts[1]: duplicate id 'a' (first at parts[0])\ninvalid: parts[1]: shape must be one of ['box', 'cone', 'cylinder', 'sphere'], got 'torus'\ninvalid: parts[2]: 'color' must be a hex string like #aabbcc\ninvalid: parts[2]: parent 'zzz' is not the id of any part"
+    }
+  ]
+}

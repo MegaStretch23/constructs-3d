@@ -1,0 +1,11 @@
+{
+  "name": "Desk lamp",
+  "units": "cm",
+  "parts": [
+    {"id": "base", "shape": "cylinder", "radius": 8, "height": 2, "position": [0, 1, 0], "color": "#444b55", "label": "Base"},
+    {"id": "stem", "shape": "cylinder", "radius": 0.8, "height": 30, "parent": "base", "position": [0, 16, 0], "color": "#9aa3ad", "label": "Stem"},
+    {"id": "arm", "shape": "box", "size": [18, 1.2, 1.2], "parent": "stem", "position": [8, 15, 0], "rotation": [0, 0, 12], "color": "#9aa3ad", "label": "Arm"},
+    {"id": "shade", "shape": "cone", "radius": 7, "height": 9, "parent": "arm", "position": [10, -4, 0], "rotation": [0, 0, 180], "color": "#d9a441", "label": "Shade"},
+    {"id": "bulb", "shape": "sphere", "radius": 2.5, "parent": "shade", "position": [0, -4, 0], "color": "#fff3c4", "label": "Bulb"}
+  ]
+}

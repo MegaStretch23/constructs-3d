@@ -1,0 +1,1 @@
+{"name": "Broken", "parts": [{"id": "a", "shape": "box", "size": [1, 0, 1]}, {"id": "a", "shape": "torus"}, {"id": "b", "shape": "sphere", "radius": 2, "parent": "zzz", "color": "red"}]}
