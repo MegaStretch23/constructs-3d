@@ -1,3 +1,5 @@
+Moved: https://github.com/MegaStretch23/construct3d
+
 # constructs-3d
 
 Describe a "construct" (a product or object made of simple parts) in JSON or a small YAML subset, validate it, and write **one standalone HTML file** with an interactive three.js view. The CLI is standard-library Python; the viewer is static and client-side (three.js is bundled inline, MIT license, so the file works from disk with no network).
